@@ -8,9 +8,8 @@ cinst -y Microsoft-Hyper-V-All -source windowsFeatures
 # Packages
 
 cinst -y ack
-
-## Git
 cinst -y git
+cinst -y cmder
 
 # Restart PowerShell / CMDer before moving on - or run
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
