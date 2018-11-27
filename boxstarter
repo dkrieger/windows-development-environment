@@ -7,6 +7,7 @@ cinst -y Microsoft-Hyper-V-All -source windowsFeatures
 
 # Packages
 
+cinst -y vim
 cinst -y ack
 cinst -y git
 cinst -y cmder
@@ -19,6 +20,20 @@ if (Test-PendingReboot) { Invoke-Reboot }
 ## Basics
 cinst -y firefox
 cinst -y 7zip.install
+cinst -y slack
+
+if (Test-PendingReboot) { Invoke-Reboot }
+
+cinst -y vcxsrv
+cinst -y poshgit
+
+if (Test-PendingReboot) { Invoke-Reboot }
+
+cinst -y wsl
+
+if (Test-PendingReboot) { Invoke-Reboot }
+
+cinst -y wsl-ubuntu-1804
 
 if (Test-PendingReboot) { Invoke-Reboot }
 
@@ -28,3 +43,5 @@ Install-ChocolateyPinnedTaskBarItem "$env:SystemRoot\system32\WindowsPowerShell\
 
 # Let's get Updates, too
 Install-WindowsUpdate -acceptEula
+
+if (Test-PendingReboot) { Invoke-Reboot }
